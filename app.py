@@ -714,7 +714,8 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         db.create_all()
         arg_host, arg_port = sys.argv[1].split(':')
-        app.run(host=arg_host, port=arg_port)
+        # app.run(host=arg_host, port=arg_port)
+        app.run(debug=False,host='0.0.0.0')
     else:
         db.create_all()
         app.run()
